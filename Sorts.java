@@ -4,10 +4,12 @@
 // 2022-01-07f
 // time spent:  0.5 hrs
 
+import java.util.ArrayList;
+
 public class Sorts {
-    public static void bubble( ArrayList<Comparable> data )
+    public static int bubble( ArrayList<Comparable> data )
     {
-        // VERSION THAT TERMINATES BASED ON NUMBER OF CHANGES MADE EACH PASS
+        int counter = 0;
         int changes = 1;
         int passNum = 0;
         while ( changes > 0 ) {
@@ -15,16 +17,17 @@ public class Sorts {
             for( int i = data.size() - 1; i > passNum; i-- ) {
                 if ( data.get(i).compareTo( data.get(i - 1) ) < 0 ) {
                     changes++;
-                    data.set( i, data.set( i - 1, data.get(i) ) );  // COOL SWAPPING B)
+                    data.set( i, data.set( i - 1, data.get(i) ) );
+                    counter++;
                 }
             }
         }
+        return counter;
     }
 
-    public static void selection( ArrayList<Comparable> data )
+    public static int selection( ArrayList<Comparable> data )
     {
-        //note: this version places greatest value at "rightmost" end
-        //maxPos will point to position of SELECTION (greatest value)
+        int counter = 0;
         int maxPos=0;
         for(int pass = data.size() - 1; pass > 0; pass--) {
             maxPos=0;
@@ -34,23 +37,24 @@ public class Sorts {
                 }
             }
             data.set(pass, data.set(maxPos, data.get(pass)));
+            counter++;
         }
+        return counter;
     }
 
-    public static void insertion( ArrayList<Comparable> data )
+    public static int insertion( ArrayList<Comparable> data )
     {
+      int counter = 0;
         for(int part = 0; part < data.size(); part++) {
-            //partition marks first item in unsorted region
-            //traverse sorted region from right to left
             for(int i = part; i > 0; i--) {
-                // "walk" the current item to where it belongs
-                // by swapping adjacent items
                 if (data.get(i).compareTo(data.get(i-1)) < 0) {
                     data.set(i,data.set(i-1, data.get(i)));
+                    counter ++;
                 }
                 else
                     break;
             }
         }
+        return counter;
     }
 }
