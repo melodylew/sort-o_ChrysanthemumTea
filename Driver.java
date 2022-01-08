@@ -2,7 +2,7 @@
 // APCS pd6
 // L04: sorts
 // 2022-01-07f
-// time spent:  0.5 hrs
+// time spent: 2.5 hrs
 
 import java.util.ArrayList;
 
