@@ -7,9 +7,9 @@
 import java.util.ArrayList;
 
 public class Sorts {
-    public static int bubble( ArrayList<Comparable> data )
+    public static long bubble( ArrayList<Comparable> data )
     {
-        int counter = 0;
+        long counter = 0;
         int changes = 1;
         int passNum = 0;
         while ( changes > 0 ) {
@@ -25,9 +25,9 @@ public class Sorts {
         return counter;
     }
 
-    public static int selection( ArrayList<Comparable> data )
+    public static long selection( ArrayList<Comparable> data )
     {
-        int counter = 0;
+        long counter = 0;
         int maxPos=0;
         for(int pass = data.size() - 1; pass > 0; pass--) {
             maxPos=0;
@@ -42,9 +42,9 @@ public class Sorts {
         return counter;
     }
 
-    public static int insertion( ArrayList<Comparable> data )
+    public static long insertion( ArrayList<Comparable> data )
     {
-      int counter = 0;
+        long counter = 0;
         for(int part = 0; part < data.size(); part++) {
             for(int i = part; i > 0; i--) {
                 if (data.get(i).compareTo(data.get(i-1)) < 0) {
