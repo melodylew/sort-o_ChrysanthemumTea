@@ -25,7 +25,7 @@ public class Driver {
             }
         }
         else if (choice.equals("descending")) {
-            for (int i = size-1; i >= 0; i--) {//descending
+            for (int i = size-1; i >= 0; i--) {
                 list.add(i);
             }
         }
@@ -46,29 +46,29 @@ public class Driver {
         return list;
     }
 
-    //randomly rearrange elements of an ArrayList
-    public static void shuffle( ArrayList al ) {
-        int randomIndex;
-        for( int i = al.size()-1; i > 0; i-- ) {
-            //pick an index at random
-            randomIndex = (int)( (i+1) * Math.random() );
-            //swap the values at position i and randomIndex
-            al.set( i, al.set( randomIndex, al.get(i) ) );
+    public static ArrayList copyAL(ArrayList<Integer> arr) {
+        ArrayList copy = new ArrayList<Integer>(arr.size());
+        for (int i = 0; i < arr.size(); i++) {
+            copy.add(arr.get(i));
         }
+        return copy;
     }
 
     public static void main(String[] args) {
-        ArrayList<Integer> chrys = new ArrayList<Integer>();
         String[] choices = {"alternating", "descending", "same", "alternating", "random"};
-
         // run trials of 10, 100, 1000, 10000, 100000
         for (int size = 10; size <= 100_000; size*=10) {
             System.out.println("performing sorts using an ArrayList of size " + size + "\n");
             for (String choice: choices) {
+                // make three array lists with the same values in the same order for consistency
                 System.out.println("performing sort on a " + choice + " ArrayList");
-                System.out.println("bubble sort took " + Sorts.bubble(populateChoices(choice, size)) + " swaps");
-                System.out.println("selection sort took " + Sorts.selection(populateChoices(choice, size)) + " swaps");
-                System.out.println("insertion sort took " + Sorts.insertion(populateChoices(choice, size)) + " swaps");
+                ArrayList chrys = populateChoices(choice, size);
+                ArrayList anthe = copyAL(chrys);
+                ArrayList mum = copyAL(chrys);
+
+                System.out.println("bubble sort took " + Sorts.bubble(chrys) + " swaps");
+                System.out.println("selection sort took " + Sorts.selection(anthe) + " swaps");
+                System.out.println("insertion sort took " + Sorts.insertion(mum) + " swaps");
                 System.out.println();
             }
             System.out.println("=======================================================");
