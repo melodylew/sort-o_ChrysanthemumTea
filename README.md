@@ -4,10 +4,14 @@
 ~ Melody Lew ~ \
 ~ Anthony Sun ~
 
+Song of the Week: Alcohol-Free by Twice
+
 ## Bubble Sort
 - Best case:
-  - the data is already sorted (in ascending order for our implementation of Bubble Sort)
-  - for example, a data 
+  - the data is already sorted (in ascending order) or all the elements are the same
+- Worst case:
+  - the data is in descending order
+
 
 
 ## Selection Sort
@@ -15,3 +19,9 @@
   - Any 
 
 ## Insertion Sort
+- Best case: 
+  - the data is already sorted (in ascending order) or all the elements are the same
+
+- Worst case:
+  - the data is in descending order
+
