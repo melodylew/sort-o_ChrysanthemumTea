@@ -3,3 +3,42 @@ APCS pd6
 L04: sorts
 2022-01-07f
 time spent: 2.5 hrs
+
+
+DISCO:
+0. The number of swaps for bubble sort and insertion sort are the same.
+
+QCC:
+
+
+BUB-QA (Q’s and their A’s from header comment):
+ * q0: If a pass requires no swaps, what do you know?
+ * a0: We are done!
+ * q1: After pass p, what do you know?
+ * a1: The beginning p elements are properly sorted!
+ * q2: How many passes are necessary to completely sort?
+ * a2: length of list - 1
+
+SEL-QA (Q’s and their A’s from header comment):
+ * q0: How many passes to sort n elements?
+ * a0: n-1
+ * q1: What do you know after pass p?
+ * a1: p elements are sorted/in the correct position
+ * q2: How do you know if sorted?
+ * a2: n-1 passes have occurred.
+ * q3: What does a pass boil down to?
+ * a3: A traversal and a swap.
+
+
+INS-QA (Q’s and their A’s from header comment):
+ * q0: How many passes to sort n elements?
+ * a0: n-1
+ * q1: What do you know after pass p?
+ * a1: p elements in the left partition are sorted
+ * q2: How will you know when sorted?
+ * a2: when the partition pointer reaches the end
+ * q3: What constitues a pass?
+ * a3: A selection of a partition element and insertion if necessary
+ * q4: What must you track?
+ * a4: We must track the partition element.
+
