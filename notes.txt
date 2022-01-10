@@ -12,6 +12,7 @@ DISCO:
 
 QCC:
 0. What is the purpose of knowing the passes of each sort if they all follow the pattern of n-1, where n is the number of elements in an arraylist?
+1. When do/should we specify the datatype (ie. <Comparable>/<Integer>) of ArrayLists?
 
 BUB-QA (Q’s and their A’s from header comment):
  * q0: If a pass requires no swaps, what do you know?
