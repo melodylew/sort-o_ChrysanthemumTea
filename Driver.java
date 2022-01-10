@@ -55,9 +55,9 @@ public class Driver {
     }
 
     public static void main(String[] args) {
-        String[] choices = {"alternating", "descending", "same", "alternating", "random"};
-        // run trials of 10, 100, 1000, 10000, 100000
-        for (int size = 10; size <= 100_000; size*=10) {
+        String[] choices = {"ascending", "descending", "same", "alternating", "random"};
+        // run trials of 10, 100, 1000, 10000
+        for (int size = 10; size <= 10_000; size*=10) {
             System.out.println("performing sorts using an ArrayList of size " + size + "\n");
             for (String choice: choices) {
                 // make three array lists with the same values in the same order for consistency
@@ -66,10 +66,17 @@ public class Driver {
                 ArrayList anthe = copyAL(chrys);
                 ArrayList mum = copyAL(chrys);
 
-                System.out.println("bubble sort took " + Sorts.bubble(chrys) + " swaps");
-                System.out.println("selection sort took " + Sorts.selection(anthe) + " swaps");
-                System.out.println("insertion sort took " + Sorts.insertion(mum) + " swaps");
+                long[] bubbleData = Sorts.bubble(chrys);
+                System.out.println("bubble sort took " + bubbleData[0] + " swaps, " + bubbleData[1] + " comparisons, and " + bubbleData[2] + " passes.");
+
+                long[] selectionData = Sorts.selection(anthe);
+                System.out.println("selection sort took " + selectionData[0] + " swaps, " + selectionData[1] + " comparisons, and " + selectionData[2] + " passes.");
+
+                long[] insertionData = Sorts.insertion(mum);
+                System.out.println("insertion sort took " + insertionData[0] + " swaps, " + insertionData[1] + " comparisons, and " + insertionData[2] + " passes.");
+
                 System.out.println();
+
             }
             System.out.println("=======================================================");
         }
