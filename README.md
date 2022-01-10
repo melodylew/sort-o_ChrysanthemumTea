@@ -1,10 +1,10 @@
 # sort-o_ChrysanthemumTea
-
+##### An implementation of elementary sorting algorithms to determine which sort(s) are the most efficient, if any. \
 ~ Ryan Lau ~ \
 ~ Melody Lew ~ \
 ~ Anthony Sun ~
 
-Song of the Week: Alcohol-Free by Twice
+**Song of the Week**: Alcohol-Free by Twice
 
 We chose to use the number of swaps to determine the best and worst cases for each sort. The case with the least amount of swaps is the best case whereas the case with the most amount of swaps is the worst case. This is because we found that the number of passes is the same for every sort and the number of comparisons in bubble sort will always be the same given that the length of the ArrayList is the same. So the number of swaps should be the deciding factor
 
