@@ -7,11 +7,11 @@ time spent: 2.5 hrs
 
 DISCO:
 0. The number of passes for all sorts and any arraylist of length n is always n-1. Therefore, we should not use it as a deciding factor for best and worst cases.
-1. The number of comparisons in bubble sort will always be the same if the length is the same, regardless of how the elements are arranged.
+1. The number of comparisons in bubble sort will always be the same if the length of the arraylist is the same, regardless of how the elements are arranged.
 
 
 QCC:
-0. 
+0. What is the purpose of knowing the passes of each sort if they all follow the pattern of n-1, where n is the number of elements in an arraylist?
 
 BUB-QA (Q’s and their A’s from header comment):
  * q0: If a pass requires no swaps, what do you know?
