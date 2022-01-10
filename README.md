@@ -25,6 +25,7 @@ We chose to use the number of swaps to determine the best and worst cases for ea
     - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     - [289, 399, 200, 324, 680, 820, 914, 966, 662, 650]
  - But an array of a different size would have a different number of swaps.
+    - [289, 399, 200, 324, 680, 820, 914, 966, 662, 650, 914, 966, 662, 650]
 
 ## Insertion Sort
 - Best case: O(n)
