@@ -13,7 +13,7 @@ public class Sorts {
         long comparisonCount = 0;
         long passCount;
 
-        for( passCount = 0; passCount < data.size(); passCount++ ) {
+        for( passCount = 0; passCount < data.size() - 1; passCount++ ) {
             //iterate thru first to next-to-last element, comparing to next
             for( int i = 0; i < data.size()-1; i++ ) {
 
@@ -63,7 +63,7 @@ public class Sorts {
         long comparisonCount = 0;
         long passCount = 0;
 
-        for(int part = 0; part < data.size(); part++) {
+        for(int part = 0; part < data.size() - 1; part++) {
             passCount++;
             for(int i = part; i > 0; i--) {
                 comparisonCount++;
