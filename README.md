@@ -10,12 +10,12 @@ We chose to use the number of swaps to determine the best and worst cases for ea
 
 ## Bubble Sort
 - Best case: O(n)
-  - The data is already sorted (in ascending order) or all the elements are the same. When Bubble Sort is performed on a list that is already sorted, it doesn't need to make any swaps.
+  - Working from left to right, Bubble Sort compares two values. If the left element is less than the right element, then no swap is performed. Thus, the best case is **when the array is already in ascending order or if all the elements are the same.**
   - Example:
     - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 - Worst case: O(n<sup>2</sup>)
-  - The data is in descending order, as this requires Bubble Sort to perform the maximum number of swaps possible to move the smallest/largest value to the leftmost/rightmost position, respectively.
+  - The worst case is **when the data is in descending order**, as this requires Bubble Sort to perform the maximum number of swaps possible to move the largest value to the rightmost position.
   - Example:
     - [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 
