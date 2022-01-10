@@ -15,7 +15,7 @@ We chose to use the number of swaps to determine the best and worst cases for ea
     - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 - Worst case: O(n<sup>2</sup>)
-  - The worst case is **when the data is in descending order**, as this requires Bubble Sort to perform the maximum number of swaps possible to move the largest value to the rightmost position.
+  - The case that takes the longest time is **when the data is in descending order**, as this requires Bubble Sort to perform the maximum number of swaps possible to move the largest value to the rightmost position.
   - Example:
     - [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
 
@@ -28,11 +28,11 @@ We chose to use the number of swaps to determine the best and worst cases for ea
 
 ## Insertion Sort
 - Best case: O(n)
-  - The data is already sorted (in ascending order) or all the elements are the same. When Insertion Sort is performed on a list that is already sorted, it doesn't need to make any swaps.
+  - **When the data is in ascending order or when all elements are the same**, Insertion Sort doesn't need to perform any backward swaps to move elements into their right position, as all elements are greater than or equal to the element to their left.
   - Example:
     - [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     - [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 - Worst case: O(n<sup>2</sup>)
-  - The data is in descending order, as this requires Insertion Sort to make the maximum number of swaps with its left neighbor to move to its sorted position in the list.
+  - The case that takes the longest time is **when the data is in descending order**, as this requires Insertion Sort to make the maximum number of swaps with its left neighbor to move to its sorted position in the list.
   - Example:
     - [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
